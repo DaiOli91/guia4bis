@@ -13,4 +13,5 @@ public class Client {
         this.address = address;
         this.rentals = new ArrayList<>();
     }
+
 }

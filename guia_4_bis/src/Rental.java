@@ -3,6 +3,8 @@ import java.time.LocalDate;
 public class Rental {
     private LocalDate rentingDate;
     private LocalDate returnDate;
+    private Movie movie;
+    private Client client;
 
     public Rental(LocalDate rentingDate, LocalDate returnDate) {
         this.rentingDate = rentingDate;
