@@ -19,17 +19,76 @@ public class Movie {
         this.country = country;
         this.description = description;
         this.genre = genre;
+        this.counterRental = 0;
+        this.availability = true;
+    }
+
+    public Movie() {
+        this.title = "";
+        this.dateRelease = null;
+        this.duration = 0;
+        this.rating = null;
+        this.country = "";
+        this.description = "";
+        this.genre = null;
+        this.counterRental = 0;
+        this.availability = false;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public LocalDate getDateRelease() {
+        return dateRelease;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public Rating getRating() {
+        return rating;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public Genre getGenre() {
+        return genre;
+    }
+
+    public int getCounterRental() {
+        return counterRental;
+    }
+
+    public boolean isAvailability() {
+        return availability;
+    }
+
+    public void setAvailability() {
+        this.availability = !availability;
+    }
+
+    public void setCounterRental() {
+        this.counterRental++;
     }
 
     @Override
     public String toString() {
-        return "Movie:" +
-                "Title: " + title + '\n' +
+        return "Title: " + title + '\n' +
                 "Release: " + dateRelease + '\n' +
-                "Duration" + duration + '\n' +
-                "Rating" + rating + '\n' +
-                "Country" + country + '\n' +
-                "Description" + description + '\n' +
-                "Genre" + genre + '\n';
+                "Duration: " + duration + '\n' +
+                "Rating: " + rating + '\n' +
+                "Country: " + country + '\n' +
+                "Description: " + description + '\n' +
+                "Genre: " + genre + '\n' +
+                "Availability: " + availability + '\n' +
+                "Counter: " + counterRental;
     }
 }

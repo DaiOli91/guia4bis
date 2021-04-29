@@ -14,4 +14,39 @@ public class Client {
         this.rentals = new ArrayList<>();
     }
 
+    public Client() {
+        this.name = "";
+        this.telNumber = "";
+        this.address = "";
+        this.rentals = new ArrayList<>();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getTelNumber() {
+        return telNumber;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public List<Rental> getRentals() {
+        return rentals;
+    }
+
+    public String getRentalsData() {
+        return rentals.toString();
+    }
+
+    @Override
+    public String toString() {
+        return "Client.-" +
+                "Name: " + name + "\n" +
+                "Tel: " + telNumber + "\n" +
+                "Address: " + address + "\n" +
+                "Rentals: " + getRentals() + "\n";
+    }
 }
